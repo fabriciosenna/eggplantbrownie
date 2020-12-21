@@ -17,7 +17,12 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     // MARK: Atributos
     
     var delegate: AdicionaRefeicaoDelegate?
-    var itens: [String] = ["Molho de Tomate", "Queijo", "Molho apimentado", "Manjericão"]
+    var itens: [Item] = [Item(nome:"Molho de Tomate", calorias: 40.0),
+                         Item(nome:"Queijo", calorias: 40.0),
+                         Item(nome:"Molho Apimentado", calorias: 40.0),
+                         Item(nome:"Manjericão", calorias: 40.0),
+                         ]
+    var itensSelecionados: [Item] = []
     
     // MARK: Atributos
     //com ? deixa como opcional para que o compilador avise de possíveis crash
@@ -36,7 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         let linhaDaTabela = indexPath.row
         let item = itens[linhaDaTabela]
         
-        celula.textLabel?.text = item
+        celula.textLabel?.text = item.nome
         
         return celula
     }
@@ -46,6 +51,9 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         guard let celula = tableView.cellForRow(at: indexPath) else {return}
+        
+        let linhaDaTabela = indexPath.row
+        itensSelecionados.append(itens[linhaDaTabela])
         
         if celula.accessoryType == .none {
             celula.accessoryType = .checkmark
@@ -67,15 +75,13 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
             return
         }
         
-        let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade)
-    
-        print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
+        let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade, itens: itensSelecionados)
+        refeicao.itens = itensSelecionados
         
         delegate?.add(refeicao)
         
         //faz com que retorne para a tela anterior ao clicar em adicionar
         navigationController?.popViewController(animated: true)
     }
-    
 }
 
