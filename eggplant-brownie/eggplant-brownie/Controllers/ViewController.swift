@@ -12,7 +12,7 @@ protocol AdicionaRefeicaoDelegate {
     func add(_ refeicao: Refeicao)
 }
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
     
     // MARK: Atributos
     
@@ -39,6 +39,19 @@ class ViewController: UIViewController, UITableViewDataSource {
         celula.textLabel?.text = item
         
         return celula
+    }
+   
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let celula = tableView.cellForRow(at: indexPath) else {return}
+        
+        if celula.accessoryType == .none {
+            celula.accessoryType = .checkmark
+        }else{
+            celula.accessoryType = . none
+        }
     }
     
     // MARK: IBActions
