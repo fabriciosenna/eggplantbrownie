@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var tableViewController: RefeicoesTableViewController?
+
 
     //com ? deixa como opcional para que o compilador avise de possíveis crash
     @IBOutlet var nomeTextField: UITextField?
@@ -16,20 +19,6 @@ class ViewController: UIViewController {
 
     @IBAction func adicionar(_ sender: Any) {
         
-       /*
-        uma forma de solucionar
-        if let nomeDaRefeicao = nomeTextField?.text, let felicidadeDaRefeicao = felicidadeTextField?.text{
-            
-            let nome = nomeDaRefeicao
-            if let felicidade = Int(felicidadeDaRefeicao){
-                let refeicao = Refeicao(nome: nome, felicidade: felicidade)
-                
-                print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
-            }else{
-                print("Erro ao tentar criar a refeição")
-            }
-        }
-        */
         
         guard let nomeDaRefeicao = nomeTextField?.text else {
             return
@@ -42,6 +31,8 @@ class ViewController: UIViewController {
         let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade)
     
         print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
+        
+        tableViewController?.add(refeicao)
         
         //faz com que retorne para a tela anterior ao clicar em adicionar
         navigationController?.popViewController(animated: true)
