@@ -10,6 +10,8 @@
 		DF276F6D258AEF8B00326F63 /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF276F6C258AEF8B00326F63 /* Refeicao.swift */; };
 		DF276F6F258AEFC800326F63 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF276F6E258AEFC800326F63 /* Item.swift */; };
 		DFBB2D1D258D4D510035ECD6 /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBB2D1C258D4D510035ECD6 /* RefeicoesTableViewController.swift */; };
+		DFBB2D202590D7770035ECD6 /* AdicionarItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBB2D1E2590D7770035ECD6 /* AdicionarItensViewController.swift */; };
+		DFBB2D212590D7770035ECD6 /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBB2D1F2590D7770035ECD6 /* AdicionarItensViewController.xib */; };
 		DFF26B05258A745A00FED9B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF26B04258A745A00FED9B6 /* AppDelegate.swift */; };
 		DFF26B07258A745A00FED9B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF26B06258A745A00FED9B6 /* ViewController.swift */; };
 		DFF26B0A258A745A00FED9B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF26B08258A745A00FED9B6 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 		DF276F6C258AEF8B00326F63 /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		DF276F6E258AEFC800326F63 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		DFBB2D1C258D4D510035ECD6 /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
+		DFBB2D1E2590D7770035ECD6 /* AdicionarItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarItensViewController.swift; sourceTree = "<group>"; };
+		DFBB2D1F2590D7770035ECD6 /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
 		DFF26B01258A745A00FED9B6 /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF26B04258A745A00FED9B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFF26B06258A745A00FED9B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				DFF26B06258A745A00FED9B6 /* ViewController.swift */,
+				DFBB2D1E2590D7770035ECD6 /* AdicionarItensViewController.swift */,
 				DFBB2D1C258D4D510035ECD6 /* RefeicoesTableViewController.swift */,
 			);
 			path = Controllers;
@@ -63,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				DFF26B08258A745A00FED9B6 /* Main.storyboard */,
+				DFBB2D1F2590D7770035ECD6 /* AdicionarItensViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +163,7 @@
 			files = (
 				DFF26B0F258A745D00FED9B6 /* LaunchScreen.storyboard in Resources */,
 				DFF26B0C258A745D00FED9B6 /* Assets.xcassets in Resources */,
+				DFBB2D212590D7770035ECD6 /* AdicionarItensViewController.xib in Resources */,
 				DFF26B0A258A745A00FED9B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF276F6F258AEFC800326F63 /* Item.swift in Sources */,
+				DFBB2D202590D7770035ECD6 /* AdicionarItensViewController.swift in Sources */,
 				DFF26B07258A745A00FED9B6 /* ViewController.swift in Sources */,
 				DFBB2D1D258D4D510035ECD6 /* RefeicoesTableViewController.swift in Sources */,
 				DF276F6D258AEF8B00326F63 /* Refeicao.swift in Sources */,
