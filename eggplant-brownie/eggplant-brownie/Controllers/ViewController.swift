@@ -42,6 +42,9 @@ class ViewController: UIViewController {
         let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade)
     
         print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
+        
+        //faz com que retorne para a tela anterior ao clicar em adicionar
+        navigationController?.popViewController(animated: true)
     }
     
 }
