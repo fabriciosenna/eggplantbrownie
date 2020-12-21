@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  eggplant-brownie
 //
-//  Created by Fabricio Rodrigo Baixo on 12/16/20.
-//  Copyright © 2020 Fabricio Rodrigo Baixo. All rights reserved.
+//  Created by Alura on 23/02/19.
+//  Copyright © 2019 Alura. All rights reserved.
 //
 
 import UIKit
