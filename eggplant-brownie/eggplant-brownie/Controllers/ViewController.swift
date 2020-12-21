@@ -8,9 +8,13 @@
 
 import UIKit
 
+protocol AdicionaRefeicaoDelegate {
+    func add(_ refeicao: Refeicao)
+}
+
 class ViewController: UIViewController {
     
-    var tableViewController: RefeicoesTableViewController?
+    var delegate: AdicionaRefeicaoDelegate?
 
 
     //com ? deixa como opcional para que o compilador avise de possíveis crash
@@ -32,7 +36,7 @@ class ViewController: UIViewController {
     
         print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
         
-        tableViewController?.add(refeicao)
+        delegate?.add(refeicao)
         
         //faz com que retorne para a tela anterior ao clicar em adicionar
         navigationController?.popViewController(animated: true)
