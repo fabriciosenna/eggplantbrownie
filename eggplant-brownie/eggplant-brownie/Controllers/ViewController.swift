@@ -59,6 +59,12 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
             celula.accessoryType = .checkmark
         }else{
             celula.accessoryType = . none
+            
+            let item = itens[indexPath.row]
+            
+            if let position = itensSelecionados.index(of: item){
+                itensSelecionados.remove(at: position)
+            }
         }
     }
     
