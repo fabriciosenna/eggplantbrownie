@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AdicionarItensViewController" customModule="eggplant_brownie" customModuleProvider="target">
             <connections>
                 <outlet property="caloriasTextField" destination="Gad-RO-eaQ" id="mKu-8N-6YV"/>
-                <outlet property="nomeTextFiekd" destination="Sp1-fa-TPs" id="4Mb-IK-IVa"/>
+                <outlet property="nomeTextField" destination="Sp1-fa-TPs" id="Vhx-y2-w71"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
